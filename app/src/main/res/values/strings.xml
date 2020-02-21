@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">GoodBoy</string>
+    <string name="app_name">#WHOSABIGBOY</string>
+    <string name="am_hello_text">А кто это тут такой хороший? \nДавай знакомиться, как тебя зовут? \nКогда родился?</string>
+    <string name="date_of_birth">дата рождения</string>
+    <string name="enter_surname">введи фамилию</string>
+    <string name="enter_name">введи имя</string>
 </resources>

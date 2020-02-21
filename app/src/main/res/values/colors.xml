@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#CE7CA6</color>
-    <color name="colorPrimaryDark">#813E66</color>
-    <color name="colorAccent">#E96502</color>
-    <color name="colorAccentTextHint">#A6E96502</color>
+    <!--AppColors-->
+    <color name="colorPrimary">@color/NavyBlueLightColor</color>
+    <color name="colorPrimaryDark">@color/NavyBlueColor</color>
+    <color name="colorAccent">@color/YellowColor</color>
 
-    <color name="colorAccentLight">#FF8F46</color>
-    <color name="colorAccentDark">#7D4115</color>
+    <color name="colorAccentLight">@color/YellowLightColor</color>
+
+    <color name="colorAccentTextHint">@color/TurquoiseColor</color>
+    <!--Buttons-->
+    <color name="colorButtonDark">@color/PurpleLightColor</color>
+    <color name="colorButtonLight">@color/TurquoiseLightColor</color>
+    <color name="colorButtonAccent">@color/YellowColor</color>
+    <!--Cards-->
+    <color name="colorButtonWhite">@color/WhiteColor</color>
+    <!--TextColors-->
+    <color name="colorTextWhite">@color/WhiteColor</color>
+    <color name="colorTextGrey1">@color/GreyColor1</color>
+    <color name="colorTextGrey2">@color/GreyColor2</color>
+    <color name="colorTextGrey3">@color/GreyColor3</color>
+    <color name="colorTextGrey4">@color/GreyColor4</color>
+    <color name="colorTextGrey5">@color/GreyColor5</color>
+
+    <!--ResColors-->
+    <color name="TurquoiseColor">#2DACD9</color>
+    <color name="TurquoiseLightColor">#61CAFF</color>
+
+    <color name="AquamarineColor">#01D9B0</color>
+    <color name="AquamarineLightColor">#02FCCE</color>
+
+    <color name="YellowColor">#C9E016</color>
+    <color name="YellowLightColor">#DFFC18</color>
+
+    <color name="NavyBlueColor">#041682</color>
+    <color name="NavyBlueLightColor">#5923AD</color>
+
+    <color name="PurpleColor">#4B44AC</color>
+    <color name="PurpleLightColor">#8C50E4</color>
+
+    <color name="WhiteColor">#FFFFFF</color>
+
+    <color name="GreyColor1">#749AA5</color>
+    <color name="GreyColor2">#56757A</color>
+    <color name="GreyColor3">#3C494F</color>
+    <color name="GreyColor4">#012C33</color>
+    <color name="GreyColor5">#0E2125</color>
 
 </resources>
