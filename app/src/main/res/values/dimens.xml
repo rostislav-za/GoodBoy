@@ -3,4 +3,15 @@
     <dimen name="margin_guidlines_horisontal">16dp</dimen>
     <dimen name="margin_guidlines_vertical">24dp</dimen>
     <dimen name="margin_betveen_items_vertical">8dp</dimen>
+    <!--Cards with Buttons-->
+    <dimen name="radius_button">24dp</dimen>
+    <dimen name="content_padding_button">2dp</dimen>
+    <!--Cards with EditText-->
+    <dimen name="content_padding_edittext">4dp</dimen>
+    <dimen name="radius_edittext">26dp</dimen>
+    <!--ChatMessages-->
+    <dimen name="magin_between_ChatMessage">4dp</dimen>
+    <dimen name="margin_ChatMessage_to_opposite">48dp</dimen>
+    <dimen name="radius_ChatMessage">26dp</dimen>
+    <dimen name="content_padding_ChatMessage">8dp</dimen>
 </resources>

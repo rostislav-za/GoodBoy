@@ -21,4 +21,7 @@ data class User(
             (date_of_birth.split(DIV)[1].toInt() - m).absoluteValue +
             DIV +
             (date_of_birth.split(DIV)[2].toInt() - y).absoluteValue
+
+
+    override fun toString() ="$name $surname \n $date_of_birth"
 }

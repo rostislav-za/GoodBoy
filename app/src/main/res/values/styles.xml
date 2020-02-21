@@ -13,5 +13,37 @@
         <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 
+    <style name="Widget.AppCompat.Button.Borderless.Button1">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginHorizontal">@dimen/margin_guidlines_horisontal</item>
+        <item name="android:background">@color/colorButtonDark</item>
+        <item name="android:backgroundTint">@color/colorButtonDark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextWhite</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/colorTextGrey3</item>
+        <item name="android:textColorHint">@color/colorTextGrey2</item>
+    </style>
+
+    <style name="TextUserChatMessageStyle">
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textColor">@color/colorTextChatMessage</item>
+        <item name="android:textStyle">normal|bold</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="TextSystemChatMessageStyle">
+        <item name="android:layout_marginHorizontal">@dimen/margin_guidlines_horisontal</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textColor">@color/colorTextWhite</item>
+        <item name="android:textStyle">normal|italic</item>
+        <item name="android:typeface">normal</item>
+    </style>
 
 </resources>

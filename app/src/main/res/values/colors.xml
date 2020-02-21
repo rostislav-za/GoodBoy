@@ -3,18 +3,25 @@
     <!--AppColors-->
     <color name="colorPrimary">@color/NavyBlueLightColor</color>
     <color name="colorPrimaryDark">@color/NavyBlueColor</color>
-    <color name="colorAccent">@color/YellowColor</color>
+    <color name="colorAccent">@color/AquamarineColor</color>
 
     <color name="colorAccentLight">@color/YellowLightColor</color>
 
     <color name="colorAccentTextHint">@color/TurquoiseColor</color>
+
     <!--Buttons-->
     <color name="colorButtonDark">@color/PurpleLightColor</color>
     <color name="colorButtonLight">@color/TurquoiseLightColor</color>
     <color name="colorButtonAccent">@color/YellowColor</color>
-    <!--Cards-->
     <color name="colorButtonWhite">@color/WhiteColor</color>
+
+    <!--Cards-->
+    <color name="colorChatMessageSystem">@color/TurquoiseLightColor</color>
+    <color name="colorChatMessageUser">@color/AquamarineLightColor</color>
+
     <!--TextColors-->
+    <color name="colorTextChatMessage">@color/GreyColor3</color>
+
     <color name="colorTextWhite">@color/WhiteColor</color>
     <color name="colorTextGrey1">@color/GreyColor1</color>
     <color name="colorTextGrey2">@color/GreyColor2</color>

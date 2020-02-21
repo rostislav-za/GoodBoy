@@ -3,7 +3,11 @@ package progr.rostoslav.za
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.include_recycler.*
+import progr.rostoslav.za.adapters.ChatMessage
+import progr.rostoslav.za.adapters.MessageAdapter
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,9 +19,18 @@ class MainActivity : AppCompatActivity() {
     var month = c.get(Calendar.MONTH)
     var day = c.get(Calendar.DAY_OF_MONTH)
 
+    val chatAdapter = MessageAdapter()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        init()
+    }
+
+    fun init() {
+        rv.layoutManager = LinearLayoutManager(this)
+        rv.adapter = chatAdapter
+        chatAdapter.addItem(ChatMessage(true, WHO_ARE_YOU_MESSAGE))
         am_btn_getbrthday.setOnClickListener { showDatePicker() }
     }
 
@@ -29,18 +42,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showResultForBoy() {
-        var r: String = ""
+        var message_text = ""
         user.name = am_et_name.text.toString()
         user.surname = am_et_surname.text.toString()
-        if (!((user.name == "") or (user.surname == ""))) {
-            r = (HELLO_MESSAGE + "\n" + user.name + " " + user.surname + "\n" +
-                    if (user.differense(day, month, year).split(DIV)[2].toInt() > age_limit
-                    ) GOOD_RESULT_MESSAGE
-                    else BAD_RESULT_MESSAGE)
+        if ((user.name != "") and (user.surname != "")) {
+            message_text = (HELLO_MESSAGE + "\n" + user.name + " " + user.surname + "\n")
+            message_text += if (user.differense(day, month, year).split(DIV)[2].toInt() > age_limit
+            ) GOOD_RESULT_MESSAGE
+            else BAD_RESULT_MESSAGE
+            chatAdapter.addItem(
+                ChatMessage(false, user.toString())
+            )
+            chatAdapter.addItem(ChatMessage(true, message_text))
         } else {
-            r = SOME_ERROR_MESSAGE + CLEAN_FIELDS_ERROR_MESSAGE
+            message_text = SOME_ERROR_MESSAGE + CLEAN_FIELDS_ERROR_MESSAGE
+            chatAdapter.addItem(ChatMessage(true, message_text))
         }
-        am_tv_result.text = r
     }
 
     //return date in string pattern "dd.mm.yyyy"

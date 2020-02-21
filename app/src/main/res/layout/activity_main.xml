@@ -8,22 +8,19 @@
     android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/am_tv_result"
+
+    <include
+        layout="@layout/include_recycler"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_guidlines_horisontal"
-        android:layout_marginTop="@dimen/margin_guidlines_vertical"
-        android:textAlignment="center"
-        android:textColor="@color/colorTextWhite"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,40 +40,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/colorButtonWhite"
-            app:cardCornerRadius="26dp"
-            app:contentPadding="4dp"
-            android:layout_marginBottom="8dp">
+            app:cardCornerRadius="@dimen/radius_edittext"
+            app:contentPadding="@dimen/content_padding_edittext"
+            android:layout_marginBottom="@dimen/margin_betveen_items_vertical">
 
             <EditText
                 android:id="@+id/am_et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints=""
                 android:hint="@string/enter_name"
                 android:inputType="textPersonName"
-                android:textAlignment="viewStart"
-                android:textColor="@color/colorTextGrey3"
-                android:textColorHint="@color/colorTextGrey2" />
+                style="@style/EditText"
+                android:autofillHints="" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/colorButtonWhite"
-            app:cardCornerRadius="26dp"
-            app:contentPadding="4dp"
-            android:layout_marginBottom="8dp">
+            app:cardCornerRadius="@dimen/radius_edittext"
+            app:contentPadding="@dimen/content_padding_edittext"
+            android:layout_marginBottom="@dimen/margin_betveen_items_vertical">
 
             <EditText
                 android:id="@+id/am_et_surname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autofillHints=""
                 android:hint="@string/enter_surname"
                 android:inputType="textPersonName"
-                android:textAlignment="viewStart"
-                android:textColor="@color/colorTextGrey3"
-                android:textColorHint="@color/colorTextGrey2" />
+                style="@style/EditText"
+                android:autofillHints="" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -84,54 +77,17 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_guidlines_vertical"
             app:cardBackgroundColor="@color/colorButtonDark"
-            app:cardCornerRadius="24dp"
-            app:contentPadding="2dp"
-
-
-            >
+            app:cardCornerRadius="@dimen/radius_button"
+            app:contentPadding="@dimen/content_padding_button">
 
             <Button
                 android:id="@+id/am_btn_getbrthday"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/Widget.AppCompat.Button.Borderless.Button1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="@dimen/margin_guidlines_horisontal"
-                android:background="@color/colorButtonDark"
-                android:backgroundTint="@color/colorButtonDark"
-                android:gravity="center"
-                android:text="@string/date_of_birth"
-                android:textColor="@color/colorTextWhite" />
+                android:text="@string/date_of_birth" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorButtonLight"
-        app:cardBackgroundColor="@color/colorButtonLight"
-        app:cardCornerRadius="26dp"
-        app:contentPadding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/am_tv_result">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/margin_guidlines_horisontal"
-            android:background="@color/colorButtonLight"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@string/am_hello_text"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/colorTextWhite"
-            android:textStyle="normal|bold|italic"
-            android:typeface="normal" />
-    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
