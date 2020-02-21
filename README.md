@@ -1,3 +1,3 @@
 # GoodBoy
 SingleActivity simple App
-[]GoodBoyApp.png
+![](GoodBoyApp.png)
