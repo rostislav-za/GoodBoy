@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showResultForBoy() {
-        var message_text = ""
+        var message_text=""
         user.name = am_et_name.text.toString()
         user.surname = am_et_surname.text.toString()
         if ((user.name != "") and (user.surname != "")) {
             message_text = (HELLO_MESSAGE + "\n" + user.name + " " + user.surname + "\n")
-            message_text += if (user.differense(day, month, year).split(DIV)[2].toInt() > age_limit
-            ) GOOD_RESULT_MESSAGE
+
+            message_text += if (user.isOlder(day,month,year,age_limit)) GOOD_RESULT_MESSAGE
             else BAD_RESULT_MESSAGE
             chatAdapter.addItem(
                 ChatMessage(false, user.toString())
